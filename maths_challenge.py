@@ -96,3 +96,13 @@ def  math_roulette_challenge():
             print("Correct! You've won a key.")
         else:
             print("Incorrect! You don't win a key.")
+def math_challenge():
+    """Sélectionne aléatoirement un défi mathématique."""
+    challenges = [
+        math_roulette_challenge,
+        math_challenge_equation,
+        math_challenge_prime,
+        math_challenge_factorial
+    ]
+    return random.choice(challenges)
+math_challenge()
