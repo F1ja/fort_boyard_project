@@ -71,7 +71,7 @@ def chance_challenge():
         print(f"- {challenge_name}")
 
     chosen_challenge = random.choice(list(challenges))
-    print(f"You have chosen {chosen_challenge}")
+    print(f" {chosen_challenge} has been choosen")
 
     if challenges[chosen_challenge]():
         print("You win a key!")
