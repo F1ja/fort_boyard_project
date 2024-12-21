@@ -9,6 +9,7 @@ def pere_fouras_riddles():
     riddles_dictionnary={}
     nb_of_atttemps=3
     selected_riddle=randint(0,len(riddles_storage)-1)
+    print(f"Here is the riddle: {riddles_storage[selected_riddle]['question']}")
 
     while nb_of_atttemps>0:
         if nb_of_atttemps!=1:
