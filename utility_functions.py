@@ -28,4 +28,4 @@ def challenges_menu():
             print("\n")
 challenges_menu()
 
-def choose_player(team):
+#def choose_player(team):
