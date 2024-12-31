@@ -5,7 +5,7 @@ def load_riddles(file):
         riddles=json.load(f)
     return riddles
 def pere_fouras_riddles():
-    riddles_storage=load_riddles('PFRiddles.json')
+    riddles_storage=load_riddles('Data/PFRiddles.json')
     riddles_dictionnary={}
     nb_of_atttemps=3
     selected_riddle=randint(0,len(riddles_storage)-1)
@@ -32,5 +32,5 @@ def pere_fouras_riddles():
     return False
 
 
-load_riddles('PFRiddles.json')
+load_riddles('Data/PFRiddles.json')
 pere_fouras_riddles()
