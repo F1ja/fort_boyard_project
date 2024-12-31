@@ -15,7 +15,7 @@ def treasure_room():
     attempts = 3
     answer_correct = False
     while attempts > 0:
-        answer = input("Enter your guess for the code word(in uppercase only): ").strip().lower()
+        answer = input("Enter your guess for the code word(in uppercase only): ").lower()
         if answer == code_word.lower():
             answer_correct = True
             break
