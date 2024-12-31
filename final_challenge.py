@@ -1,26 +1,35 @@
-#import random
-#import json
-def load_clues(file):
-    with open('TRClues.json', 'r') as file:
-        data = json.load(file)
-        return data
-
-#CLUES_FILE =load_clues('TRClues.json')
-#
-#print(CLUES_FILE['Fort Boyard']['2015']['Show 01']['Clues'])
-#a=random.choice(CLUES_FILE['Fort Boyard'])
-#print(a)
 import json
 import random
+
 def treasure_room():
-    tv_game = load_clues('TRClues.json')
-    fort_boyard_data = tv_game["Fort Boyard"]
-    list_of_years = list(fort_boyard_data.keys())
-    random_year = random.choice(list(fort_boyard_data.keys()))
-    random_show = random.choice(list(fort_boyard_data[tv_game].keys()))
-    clues = fort_boyard_data[tv_game][random_show]["Clues"]
-    print(f"Année : {tv_game}")
-    print(f"Show : {random_show}")
-    print("Clues :")
-    print(clues)
+    with open('Data/TRClues.json','r') as f:
+        tv_game = json.load(f)
+    tv_game = tv_game["Fort Boyard"]
+    year = random.choice(list(tv_game.keys()))
+    show = random.choice(list(tv_game[year].values()))
+    clues = show['Clues']
+    code_word = show['CODE-WORD']
+    print("Clues:")
+    for i in range(3):
+        print(f"->{clues[i]}")
+    attempts = 3
+    answer_correct = False
+    while attempts > 0:
+        answer = input("Enter your guess for the code word(in uppercase only): ").strip().lower()
+        if answer == code_word.lower():
+            answer_correct = True
+            break
+        else:
+            attempts -= 1
+            if attempts > 0:
+                print(f"Wrong answer! {attempts} attempts remaining.")
+                if len(clues) > 3 + (3 - attempts):
+                    print(f"Additional clue: {clues[3 + (3 - attempts)]}")
+            else:
+                print(f"Wrong answer! No attempts remaining.")
+                print(f"The correct code word was: {code_word}")
+    if answer_correct:
+        print("Congratulations! You've opened the treasure room and won the game!")
+    else:
+        print("Sorry! You've failed to open the treasure room.")
 treasure_room()
