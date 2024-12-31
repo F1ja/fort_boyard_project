@@ -1,7 +1,7 @@
 #import random
 #import json
 def load_clues(file):
-    with open('Data/TRClues.json', 'r') as file:
+    with open('TRClues.json', 'r') as file:
         data = json.load(file)
         return data
 
@@ -13,7 +13,7 @@ def load_clues(file):
 import json
 import random
 def treasure_room():
-    tv_game = load_clues('Data/TRClues.json')
+    tv_game = load_clues('TRClues.json')
     fort_boyard_data = tv_game["Fort Boyard"]
     list_of_years = list(fort_boyard_data.keys())
     random_year = random.choice(list(fort_boyard_data.keys()))
