@@ -20,7 +20,7 @@ The **Fort Boyard Riddle Game** is a console-based interactive application inspi
 - **Libraries**:
     - `json`: For managing riddles and clues data.
     - `random`: For random selection in challenges.
-    - 'time': For sleep in different games
+    - `time`: For sleep in different games
 
 - **Tools**:
     - JetBrains PyCharm: Code editor and IDE.
