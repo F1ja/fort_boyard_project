@@ -2,21 +2,21 @@ import random
 
 from random import randint
 
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n-1)
+#def factorial(n):
+#    if n == 0:
+#        return 1
+#    else:
+#        return n * factorial(n-1)
 
-def math_challenge_factorial():
-    n=randint(1,10)
-    print(f"Math Challenge: Calculate the factorial of {n}." )
+#def math_challenge_factorial():
+#    n=randint(1,10)
+#    print(f"Math Challenge: Calculate the factorial of {n}." )
     n_guess=int(input("Your answer:"))
-    if n_guess == factorial(n):
-        print("Correct! You win a key.")
-    else:
-        print(f"Wrong! The correct answer was {factorial(n)}.")
-math_challenge_factorial()
+#    if n_guess == factorial(n):
+#        print("Correct! You win a key.")
+#    else:
+#        print(f"Wrong! The correct answer was {factorial(n)}.")
+#math_challenge_factorial()
 a=0
 b=0
 s=0
@@ -26,7 +26,7 @@ def solve_linear_equation():
     b=randint(1,10)
     s=-b/a
     return a,b,s
-solve_linear_equation()
+#solve_linear_equation()
 
 def math_challenge_equation():
     solve_linear_equation()
@@ -56,7 +56,7 @@ def math_challenge_prime():
         print("Correct! You win a key.")
     else:
         print(f"Wrong! The correct answer was {nearest_prime(n)}.")
-math_challenge_prime()
+#math_challenge_prime()
 k=0
 l=0
 m=0
@@ -97,12 +97,12 @@ def  math_roulette_challenge():
         else:
             print("Incorrect! You don't win a key.")
 def math_challenge():
-    """Sélectionne aléatoirement un défi mathématique."""
+    """Choose randomly a math challenge for the user."""
     challenges = [
         math_roulette_challenge,
         math_challenge_equation,
         math_challenge_prime,
-        math_challenge_factorial
+        #math_challenge_factorial
     ]
     return random.choice(challenges)
 math_challenge()
