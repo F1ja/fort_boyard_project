@@ -26,6 +26,26 @@ def challenges_menu():
                 return choice
         finally:
             print("\n")
-challenges_menu()
+#challenges_menu()
+team = [
+    {"name": "Jean Dupont", "profession": "Engineer", "role": "Leader"},
+    {"name": "Marie Martin", "profession": "Teacher", "role": "Member"},
+    {"name": "Paul Durand", "profession": "Doctor", "role": "Member"}]
+def choose_player(team):
+    """
+    Allows the user to select a player from the team.
 
-#def choose_player(team):
+    Args:
+        team (list): A list of dictionaries, each representing a player with their details.
+
+    Returns:
+        dict: The selected player's dictionary containing their information.
+    """
+    for position,player in enumerate(team):
+        print(f"{position+1}.{player['name']} ({player['profession']}) - {player['role']}")
+    choosed_player=int(input("Enter the player's number:"))
+    choosed_player=team[choosed_player-1]
+    print(choosed_player['name'])
+    print(choosed_player)
+    return choosed_player
+choose_player(team)
