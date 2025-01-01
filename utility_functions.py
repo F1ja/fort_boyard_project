@@ -2,12 +2,28 @@ def  introduction():
     print("The player must complete challenges to earn keys and unlock the treasure room.")
     print("The aim is to collect three keys to access the treasure room.")
 def compose_equipe():
-    n=4
-    while n>3:
-        n=int(input("Enter the number of players in your team: "))
-        if n>3:
-            print("you can't have more than 3 players in your team.")
-            print("Enter again")
+    team = []
+    nb_players = 0
+    while nb_players < 1 or nb_players > 3:
+        nb_players = int(input("How many players do you want to include in the team? (max 3): "))
+        if nb_players < 1 or nb_players > 3:
+            print("Invalid input. The team can have up to 3 players. Try again.")
+    leader_found=False
+    for i in range(nb_players):
+        print(f"Enter details for Player {i + 1}:")
+        name = input("Name: ")
+        profession = input("Profession: ")
+        is_leader = input("Leader or Member: ")
+        if is_leader == 'Leader':
+            leader_found = True
+        player = {"name": name, "profession": profession, "role": is_leader}
+        team.append(player)
+    if not leader_found:
+        print(f"No leader was selected. {team[0]['name']} is automatically assigned as the leader.")
+        team[0]['role'] = 'Leader'
+    return team
+compose_equipe()
+
 
 def challenges_menu():
     while True:
@@ -17,15 +33,13 @@ def challenges_menu():
         print("3. Chance challenge")
         print("4. Père Fouras' riddle")
 
-        try:
-            choice = int(input("Enter the number corresponding to your choice: "))
-            if 1 > choice or choice > 4:
-                print("Invalid choice. Please enter a number between 1 and 4.")
-            else:
-                print("You chose challenge", choice)
-                return choice
-        finally:
-            print("\n")
+        choice = int(input("Enter the number corresponding to your choice: "))
+        if 1 > choice or choice > 4:
+            print("Invalid choice. Please enter a number between 1 and 4.")
+        else:
+            print("You chose challenge", choice)
+            return choice
+        print("\n")
 #challenges_menu()
 team = [
     {"name": "Jean Dupont", "profession": "Engineer", "role": "Leader"},
@@ -48,4 +62,4 @@ def choose_player(team):
     print(choosed_player['name'])
     print(choosed_player)
     return choosed_player
-choose_player(team)
+#choose_player(team)
