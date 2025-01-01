@@ -13,10 +13,7 @@ def compose_equipe():
         print(f"Enter details for Player {i + 1}:")
         name = input("Name: ")
         profession = input("Profession: ")
-        if not leader_found:
-            is_leader = input("Leader or Member: ")
-        else:
-            is_leader=input("There is already a leader in the team. Choose 'Member' :")
+        is_leader = input("Leader or Member: ")
         if is_leader == 'Leader':
             leader_found = True
         player = {"name": name, "profession": profession, "role": is_leader}
@@ -25,6 +22,7 @@ def compose_equipe():
         print(f"No leader was selected. {team[0]['name']} is automatically assigned as the leader.")
         team[0]['role'] = 'Leader'
     return team
+compose_equipe()
 
 
 def challenges_menu():
@@ -42,11 +40,11 @@ def challenges_menu():
             print("You chose challenge", choice)
             return choice
         print("\n")
-#team = [
-  #  {"name": "Jean Dupont", "profession": "Engineer", "role": "Leader"},
-    #{"name": "Marie Martin", "profession": "Teacher", "role": "Member"},
-    #{"name": "Paul Durand", "profession": "Doctor", "role": "Member"}]
-team=compose_equipe()
+#challenges_menu()
+team = [
+    {"name": "Jean Dupont", "profession": "Engineer", "role": "Leader"},
+    {"name": "Marie Martin", "profession": "Teacher", "role": "Member"},
+    {"name": "Paul Durand", "profession": "Doctor", "role": "Member"}]
 def choose_player(team):
     """
     Allows the user to select a player from the team.
@@ -60,8 +58,10 @@ def choose_player(team):
     for position,player in enumerate(team):
         print(f"{position+1}.{player['name']} ({player['profession']}) - {player['role']}")
     choosed_player=int(input("Enter the player's number:"))
+    while choosed_player<1 or choosed_player>len(team):
+        print("Invalid player number. Please try again.")
     choosed_player=team[choosed_player-1]
     print(choosed_player['name'])
     print(choosed_player)
     return choosed_player
-choose_player(team)
+#choose_player(team)
