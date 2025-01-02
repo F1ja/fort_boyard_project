@@ -27,8 +27,10 @@ def math_challenge_equation():
     s_given = float(input("Enter the value of x (rounded to 10^-2): "))
     if s_given == round(s, 2):
         print("Correct! You win a key.")
+        return True
     else:
         print("Incorrect! You don't win a key.")
+        return False
 
 def is_prime(n):
     """
@@ -61,8 +63,10 @@ def math_challenge_prime():
     n_guess = int(input("Enter your answer: "))
     if n_guess == nearest_prime(n):
         print("Correct! You win a key.")
+        return True
     else:
         print(f"Wrong! The correct answer was {nearest_prime(n)}.")
+        return False
 
 def math_roulette_challenge():
     """
@@ -85,16 +89,20 @@ def math_roulette_challenge():
         n_guess = int(input("Your answer: "))
         if n_guess == n_result:
             print("Correct! You've won a key.")
+            return True
         else:
             print("Incorrect! You don't win a key.")
+            return False
     elif chosen_operation == "-":
         print("Calculate the result by combining these numbers with subtraction")
         n_result = k - l - m - p - o
         n_guess = int(input("Your answer: "))
         if n_guess == n_result:
             print("Correct! You've won a key.")
+            return True
         else:
             print("Incorrect! You don't win a key.")
+            return False
     elif chosen_operation == "*":
         print("Calculate the result by combining these numbers with multiplication")
         n_result = k * l * m * p * o
@@ -117,7 +125,7 @@ def math_challenge():
         math_challenge_prime
     ]
     selected_challenge = random.choice(challenges)
-    selected_challenge()
+    return selected_challenge()
 
 # Start the math challenge
 #math_challenge()

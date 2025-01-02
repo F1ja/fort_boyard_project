@@ -33,16 +33,25 @@ def game():
                 keys += 1
                 print(f"{player['name']} won the Battleship game!")
                 record_history("Battleship Game", player, team, 1)
+            else:
+                print(f"{player['name']} failed the Battleship game.")
+                record_history("Battleship Game", player, team, 0)
         elif challenge_choice == 3:
             if chance_challenge():
                 keys += 1
                 print(f"{player['name']} won the Chance Challenge!")
                 record_history("Chance Challenge", player, team, 1)
+            else:
+                print(f"{player['name']} failed the Chance Challenge.")
+                record_history("Chance Challenge", player, team, 0)
         elif challenge_choice == 4:
             if pere_fouras_riddles():
                 keys += 1
                 print(f"{player['name']} won the Pere Fouras Riddles!")
                 record_history("Pere Fouras Riddles", player, team, 1)
+            else:
+                print(f"{player['name']} failed the Pere Fouras Riddles.")
+                record_history("Pere Fouras Riddles", player, team, 0)
         if keys == 3:
             print("Congratulations! You have won 3 keys. Now, it's time for the final challenge.")
             if treasure_room():

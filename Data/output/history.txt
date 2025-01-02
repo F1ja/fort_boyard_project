@@ -4,3 +4,45 @@ Role: Leader
 Result: Win
 Keys Won: 1
 ----------------------------------------
+Challenge: Math Challenge
+Player: Erwan (Student)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Math Challenge
+Player: er (student)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Math Challenge
+Player: r1 (student)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Math Challenge
+Player: r1 (student)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Math Challenge
+Player: er (er)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Math Challenge
+Player: er (er)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Math Challenge
+Player: er (er)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
