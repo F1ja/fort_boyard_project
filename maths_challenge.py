@@ -101,8 +101,10 @@ def math_roulette_challenge():
         n_guess = int(input("Your answer: "))
         if n_guess == n_result:
             print("Correct! You've won a key.")
+            return True
         else:
             print("Incorrect! You don't win a key.")
+            return False
 
 def math_challenge():
     """
@@ -118,4 +120,4 @@ def math_challenge():
     selected_challenge()
 
 # Start the math challenge
-math_challenge()
+#math_challenge()

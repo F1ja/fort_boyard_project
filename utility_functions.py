@@ -1,6 +1,7 @@
 def  introduction():
     print("The player must complete challenges to earn keys and unlock the treasure room.")
     print("The aim is to collect three keys to access the treasure room.")
+#introduction()
 def compose_equipe():
     team = []
     nb_players = 0
@@ -45,7 +46,7 @@ def challenges_menu():
             print(challenges[choice-1])
         return choice
 
-challenges_menu()
+#challenges_menu()
 #team = [
   #  {"name": "Jean Dupont", "profession": "Engineer", "role": "Leader"},
     #{"name": "Marie Martin", "profession": "Teacher", "role": "Member"},
@@ -88,6 +89,6 @@ def record_history(challenge_name, player,team, key_won):
     history_str += f"Keys Won: {history['keys_won']}\n"
     history_str += "-" * 40 + "\n"
 
-    with open('history.txt', 'a') as file:
+    with open('Data/output/history.txt', 'a') as file:
         file.write(history_str)
 #record_history("pere_fouras_challenge",team[0],team,3)

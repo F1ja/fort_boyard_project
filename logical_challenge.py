@@ -200,11 +200,13 @@ def battleship_game():
         turn(player, player_shot_grid, opponent_grid)
         if has_won(player_shot_grid):
             print("Congratulations! You have sunk all the Game Master's boats!")
+            return True
             break
         if master_hit==2:
             print("The Game Master has sunk all your boats. You lose!")
+            return False
             break
         player = next_player(player)  # Pass turn to the next player
         sleep(3)
 
-battleship_game()
+#battleship_game()

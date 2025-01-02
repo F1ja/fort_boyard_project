@@ -107,4 +107,4 @@ def chance_challenge():
         return False
 
 # Start the challenge
-chance_challenge()
+#chance_challenge()

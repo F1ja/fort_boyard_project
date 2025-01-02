@@ -33,4 +33,4 @@ def pere_fouras_riddles():
 
 
 load_riddles('Data/PFRiddles.json')
-pere_fouras_riddles()
+#pere_fouras_riddles()

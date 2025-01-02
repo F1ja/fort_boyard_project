@@ -34,4 +34,4 @@ def treasure_room():
     else:
         print("Sorry! You've failed to open the treasure room.")
         return False
-treasure_room()
+#treasure_room()
