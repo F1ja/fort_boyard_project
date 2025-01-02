@@ -69,14 +69,23 @@ def choose_player(team):
     print(choosed_player)
     return choosed_player
 #choose_player(team)
-def record_history(challenge_name, player, key_won):
+
+def record_history(challenge_name, player,team, key_won):
     history = {
         'challenge_name': challenge_name,
         'player_name': player['name'],
         'player_profession': player['profession'],
+        'is_leader': player['role'],
         'result': 'Win' if key_won > 0 else 'Loss',
         'keys_won': key_won
     }
+    history_str = f"Challenge: {history['challenge_name']}\n"
+    history_str += f"Player: {history['player_name']} ({history['player_profession']})\n"
+    history_str += f"Role: {history['is_leader']}\n"
+    history_str += f"Result: {history['result']}\n"
+    history_str += f"Keys Won: {history['keys_won']}\n"
+    history_str += "-" * 40 + "\n"
 
-    with open('output/history.txt', 'a') as file:
-        file.write(history)
+    with open('history.txt', 'a') as file:
+        file.write(history_str)
+#record_history("pere_fouras_challenge",team[0],team,3)
