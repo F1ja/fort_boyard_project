@@ -6,8 +6,7 @@ shells = ['A', 'B', 'C']
 welcome_mess = "Welcome to the 'Shell Game'!"
 rules_mess = "Rules: You must find under which of the three shells (A, B, or C) the key is hidden."
 invalid_mess = "Invalid choice. Please guess one of the following: A, B, or C."
-attempts_mess = "You have {} attempts remaining to guess the numbers."
-
+attempts_mess = "You have {} attempts remaining to roll a 6"
 def roll_dice():
     """
     Simulates rolling two dice.

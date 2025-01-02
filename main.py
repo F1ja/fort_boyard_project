@@ -58,6 +58,12 @@ def game():
                 print("You have successfully unlocked the treasure room!")
             else:
                 print("Unfortunately, you failed to unlock the treasure room.")
-            break
+            play_again = input("\nDo you want to play another game? (yes/no): ")
+            if play_again == "yes":
+                game()
+            else:
+                print("Thank you for playing! Goodbye!")
+                break
+
 
 game()
