@@ -101,8 +101,10 @@ def chance_challenge():
     # Execute the chosen challenge
     if challenges[chosen_challenge]():
         print("You win a key!")
+        return True
     else:
         print("You lost!")
+        return False
 
 # Start the challenge
 chance_challenge()

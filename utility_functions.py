@@ -29,6 +29,7 @@ def compose_equipe():
 
 
 def challenges_menu():
+    challenges = ["Mathematics challenge", "Logic challenge", "Chance challenge", "Père Fouras' riddle"]
     while True:
         print("\n--- Challenges Menu ---")
         print("1. Mathematics challenge")
@@ -41,14 +42,15 @@ def challenges_menu():
             print("Invalid choice. Please enter a number between 1 and 4.")
         else:
             print("You chose challenge", choice)
-            return choice
-        print("\n")
-#challenges_menu()
+            print(challenges[choice-1])
+        return choice
+
+challenges_menu()
 #team = [
   #  {"name": "Jean Dupont", "profession": "Engineer", "role": "Leader"},
     #{"name": "Marie Martin", "profession": "Teacher", "role": "Member"},
     #{"name": "Paul Durand", "profession": "Doctor", "role": "Member"}]
-team=compose_equipe()
+#team=compose_equipe()
 def choose_player(team):
     """
     Allows the user to select a player from the team.
