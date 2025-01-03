@@ -48,10 +48,16 @@ def ask_position():
     Returns:
         str: The selected position in the format "row,column" (e.g., "1,2").
     """
-    position = input("Enter the position you want to play (row, column) between 1 and 3 (e.g. 1,2):")
-    while position not in ["1,1", "1,2", "1,3", "2,1", "2,2", "2,3", "3,1", "3,2", "3,3"]:
-        print("Invalid position. Please try again.")
+    if boats<2:
+        position = input("Enter the position you want to pace your boat (row, column) between 1 and 3 (e.g. 1,2):")
+        while position not in ["1,1", "1,2", "1,3", "2,1", "2,2", "2,3", "3,1", "3,2", "3,3"]:
+            print("Invalid position. Please try again.")
+            position = input("Enter the position you want to place your boat (row, column) between 1 and 3 (e.g. 1,2):")
+    if boats==2:
         position = input("Enter the position you want to play (row, column) between 1 and 3 (e.g. 1,2):")
+        while position not in ["1,1", "1,2", "1,3", "2,1", "2,2", "2,3", "3,1", "3,2", "3,3"]:
+            print("Invalid position. Please try again.")
+            position = input("Enter the position you want to play (row, column) between 1 and 3 (e.g. 1,2):")
     return position
 def initialize():
     """
@@ -61,7 +67,7 @@ def initialize():
     Returns:
         tuple: A tuple containing the player's grid with boats and the opponent's grid with boats.
     """
-    global  opponent_grid, grid
+    global  opponent_grid, grid, boats
     grid=empty_grid()
 
     display_grid(grid, "Time to choose your boat position wisely!")

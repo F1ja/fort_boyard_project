@@ -1,13 +1,1 @@
 Game 1 summary:
-Challenge: Math Challenge
-Player: hjio (jipom)
-Role: Leader
-Result: Win
-Keys Won: 1
-----------------------------------------
-Challenge: Chance Challenge
-Player: hjio (jipom)
-Role: Leader
-Result: Win
-Keys Won: 1
-----------------------------------------
