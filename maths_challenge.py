@@ -59,7 +59,7 @@ def math_challenge_prime():
     Prompts the user to enter their guess.
     """
     n = randint(10, 20)
-    print(f"Maths challenge: Find the nearest prime number to {n}")
+    print(f"Maths challenge: Find the nearest prime number to {n} (greater or equal to n)")
     n_guess = int(input("Enter your answer: "))
     if n_guess == nearest_prime(n):
         print("Correct! You win a key.")

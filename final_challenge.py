@@ -50,7 +50,7 @@ def treasure_room():
     # Start the guessing loop
     while attempts > 0:
         # Ask the player for their guess
-        answer = input("Enter your guess for the code word(in uppercase only): ").strip().lower()
+        answer = input("Enter your guess for the code word: ").strip().lower()
 
         # Check if the answer matches the code word
         if answer == code_word.lower():
