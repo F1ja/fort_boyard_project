@@ -25,34 +25,42 @@ def game():
         player = player_choice['name']
         if challenge_choice == 1:
             if math_challenge():
+                sleep(2)
                 keys += 1
                 print(f"{player} won the math challenge!")
                 record_history("Math Challenge", player_choice, team, 1)
             else:
+                sleep(2)
                 print(f"{player} failed the math challenge.")
                 record_history("Math Challenge", player_choice, team, 0)
         elif challenge_choice == 2:
             if battleship_game():
+                sleep(2)
                 keys += 1
                 print(f"{player} won the Battleship game!")
                 record_history("Battleship Game", player_choice, team, 1)
             else:
+                sleep(2)
                 print(f"{player} failed the Battleship game.")
                 record_history("Battleship Game", player_choice, team, 0)
         elif challenge_choice == 3:
             if chance_challenge():
+                sleep(2)
                 keys += 1
                 print(f"{player} won the Chance Challenge!")
                 record_history("Chance Challenge", player_choice, team, 1)
             else:
+                sleep(2)
                 print(f"{player} failed the Chance Challenge.")
                 record_history("Chance Challenge", player_choice, team, 0)
         elif challenge_choice == 4:
             if pere_fouras_riddles():
+                sleep(2)
                 keys += 1
                 print(f"{player} won the Pere Fouras Riddles!")
                 record_history("Pere Fouras Riddles", player_choice, team, 1)
             else:
+                sleep(2)
                 print(f"{player} failed the Pere Fouras Riddles.")
                 record_history("Pere Fouras Riddles", player_choice, team, 0)
         if keys == 3:
