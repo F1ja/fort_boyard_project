@@ -4,6 +4,7 @@ from logical_challenge import battleship_game
 from maths_challenge import math_challenge
 from pere_fouras_challenge import pere_fouras_riddles
 from utility_functions import introduction, compose_equipe, challenges_menu, record_history, choose_player
+from time import sleep
 
 game_number = 1  # Tracks the current game number
 
