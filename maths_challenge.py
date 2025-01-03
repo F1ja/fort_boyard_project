@@ -24,7 +24,7 @@ def math_challenge_equation():
     """
     solve_linear_equation()
     print(f"Maths challenge: Solve the equation {a}x + {b} = 0")
-    s_given = float(input("Enter the value of x (rounded to 10^-2): "))
+    s_given = float(input("Enter the value of x (rounded to 10^-2 ex: if answer is 2.956, enter 2.96): "))
     if s_given == round(s, 2):
         print("Correct! You win a key.")
         return True
