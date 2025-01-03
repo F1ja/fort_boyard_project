@@ -5,8 +5,14 @@ from maths_challenge import math_challenge
 from pere_fouras_challenge import pere_fouras_riddles
 from utility_functions import introduction, compose_equipe, challenges_menu, record_history
 
-
+game_number = 1
 def game():
+    global game_number
+    if game_number == 1:
+        with open("Data/output/history.txt", "w") as file:
+            file.write("")
+    with open("Data/output/history.txt", "a") as file:
+        file.write(f"Game {game_number} summary:\n")
     introduction()
     print("You are going to create your team.")
     team = compose_equipe()
@@ -55,18 +61,23 @@ def game():
         if keys == 3:
             print("Congratulations! You have won 3 keys. Now, it's time for the final challenge.")
             if treasure_room():
+                with open("Data/output/history.txt", "a") as file:
+                    file.write("You unlocked the treasure room!\n")
                 print("You have successfully unlocked the treasure room!")
             else:
+                with open("Data/output/history.txt", "a") as file:
+                    file.write("You failed to unlock the treasure room.\n")
                 print("Unfortunately, you failed to unlock the treasure room.")
             show_summary = input("Would you like to see the game summary? (yes/no): ")
             if show_summary.lower() == "yes":
                 with open("Data/output/history.txt", "r") as file:
-                    print("\nGame Summary:")
                     print(file.read())
             play_again = input("\nDo you want to play another game? (yes/no): ")
             if play_again == "yes":
+                game_number += 1
                 game()
             else:
+                game_number = 1
                 print("Thank you for playing! Goodbye!")
 
 
