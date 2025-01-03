@@ -5,10 +5,11 @@ def  introduction():
 def compose_equipe():
     team = []
     nb_players = 0
-    while nb_players < 1 or nb_players > 3:
-        nb_players = int(input("How many players do you want to include in the team? (max 3): "))
-        if nb_players < 1 or nb_players > 3:
-            print("Invalid input. The team can have up to 3 players. Try again.")
+    nb_players = input("How many players do you want to include in the team? (max 3): ")
+    while nb_players not in ["1", "2", "3"]:
+        print("Invalid input. The team can have up to 3 players. Try again.")
+        nb_players = input("How many players do you want to include in the team? (max 3): ")
+    nb_players = int(nb_players)
     leader_found=False
     for i in range(nb_players):
         print(f"Enter details for Player {i + 1}:")
@@ -16,8 +17,11 @@ def compose_equipe():
         profession = input("Profession: ")
         if not leader_found:
             is_leader = input("Leader or Member: ")
+            while is_leader not in ["Leader", "Member"]:
+                is_leader=input("Invalid input. Choose 'Leader' or 'Member': ")
         else:
-            is_leader = input("There is already a leader in the team. Choose 'Member' :")
+            print(f"The leader has already been selected. The player {name} is automatically assigned as a Member.")
+            is_leader = 'Leader'
         if is_leader == 'Leader':
             leader_found = True
         player = {"name": name, "profession": profession, "role": is_leader}
@@ -38,12 +42,12 @@ def challenges_menu():
         print("3. Chance challenge")
         print("4. Père Fouras' riddle")
 
-        choice = int(input("Enter the number corresponding to your choice: "))
-        if 1 > choice or choice > 4:
-            print("Invalid choice. Please enter a number between 1 and 4.")
-        else:
-            print("You chose challenge", choice)
-            print(challenges[choice-1])
+        choice = input("Enter the number corresponding to your choice: ")
+        while choice not in ["1", "2", "3", "4"]:
+            choice = input("Invalid choice. Please enter a number between 1 and 4: ")
+        choice = int(choice)
+        print("You chose challenge", choice)
+        print(challenges[choice-1])
         return choice
 
 #challenges_menu()
@@ -64,12 +68,12 @@ def choose_player(team):
     """
     for position,player in enumerate(team):
         print(f"{position+1}.{player['name']} ({player['profession']}) - {player['role']}")
-    choosed_player=int(input("Enter the player's number:"))
-    while choosed_player<1 or choosed_player>len(team):
-        print("Invalid player number. Please try again.")
+    choosed_player=input("Enter the player's number:")
+    while choosed_player not in [str(i+1) for i in range(len(team))]:
+        choosed_player=input("Invalid player number. Please try again:")
+    choosed_player=int(choosed_player)
     choosed_player=team[choosed_player-1]
     print(choosed_player['name'])
-    print(choosed_player)
     return choosed_player
 #choose_player(team)
 

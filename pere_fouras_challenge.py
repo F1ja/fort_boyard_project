@@ -26,9 +26,9 @@ def pere_fouras_riddles():
             if nb_of_atttemps==2:
                 print("Hahaha! Last chance unfortunate!")
             else:
-                print(f"Incorrect! You lose a key! the answer was {riddles_storage[selected_riddle]['answer']}")
+                print(f"Incorrect! You lose a key! ")
             nb_of_atttemps-=1
-    print("Oh oh oh, how predictable. The riddle was too hard for you. Nobody can guess my riddles!")
+    print(f"Oh oh oh, how predictable. The riddle was too hard for you. Nobody can guess my riddles! The answer was {riddles_storage[selected_riddle]['answer']}")
     return False
 
 
