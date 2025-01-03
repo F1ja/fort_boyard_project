@@ -30,7 +30,7 @@ def game():
 
     """
     global game_number
-
+    alone=False
     # Clear the history file for the first game
     if game_number == 1:
         with open("Data/output/history.txt", "w") as file:
@@ -44,15 +44,22 @@ def game():
     introduction()  # Display introductory instructions
     print("You are going to create your team.")
     team = compose_equipe()  # Gather player details
+    if len(team) ==1 :
+        alone=True
     keys = 0  # Initialize the number of keys earned
 
     # Loop to perform challenges until 3 keys are earned
     while keys < 3:
         # Display challenges menu and allow player selection
         challenge_choice = challenges_menu()
-        print("Choose a player for the challenge:")
-        player_choice = choose_player(team)  # Let user select a team member
-        player = player_choice['name']  # Get the player's name
+        if not alone:
+            print("Choose a player for the challenge:")
+            player_choice = choose_player(team)  # Let user select a team member
+            player = player_choice['name']  # Get the player's name
+        if alone:
+            player_choice=team[0]
+            player=team[0]['name']
+            print(f"The player {player} will play the challenge (Only player in the team). ")
 
         # Perform the selected challenge
         if challenge_choice == 1:  # Mathematics Challenge

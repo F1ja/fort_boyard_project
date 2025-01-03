@@ -1,58 +1,13 @@
 Game 1 summary:
 Challenge: Math Challenge
-Player: erknj (retét)
-Role: Leader
-Result: Win
-Keys Won: 1
-----------------------------------------
-Challenge: Math Challenge
-Player: erknj (retét)
-Role: Leader
-Result: Win
-Keys Won: 1
-----------------------------------------
-Challenge: Math Challenge
-Player: erknj (retét)
-Role: Leader
-Result: Loss
-Keys Won: 0
-----------------------------------------
-Challenge: Chance Challenge
-Player: erknj (retét)
-Role: Leader
-Result: Win
-Keys Won: 1
-----------------------------------------
-You failed to unlock the treasure room.
-Game 2 summary:
-Challenge: Math Challenge
-Player: fer (gerk)
+Player: fer (fera)
 Role: Leader
 Result: Loss
 Keys Won: 0
 ----------------------------------------
 Challenge: Math Challenge
-Player: fer (gerk)
-Role: Leader
-Result: Loss
-Keys Won: 0
-----------------------------------------
-Challenge: Math Challenge
-Player: fer (gerk)
+Player: fer (fera)
 Role: Leader
 Result: Win
 Keys Won: 1
 ----------------------------------------
-Challenge: Math Challenge
-Player: fer (gerk)
-Role: Leader
-Result: Win
-Keys Won: 1
-----------------------------------------
-Challenge: Math Challenge
-Player: fer (gerk)
-Role: Leader
-Result: Win
-Keys Won: 1
-----------------------------------------
-You unlocked the treasure room!

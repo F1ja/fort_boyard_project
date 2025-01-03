@@ -38,22 +38,28 @@ def compose_equipe():
     leader_found = False
 
     # Input player details for the specified number of players
+
     for i in range(nb_players):
         print(f"Enter details for Player {i + 1}:")
         name = input("Name: ")
         profession = input("Profession: ")
 
         # Only allow one player to be selected as the leader
-        if not leader_found:
-            is_leader = input("Leader or Member: ")
-            while is_leader not in ["Leader", "Member"]:
-                is_leader = input("Invalid input. Choose 'Leader' or 'Member': ")
-        else:
-            print(f"The leader has already been selected. The player {name} is automatically assigned as a Member.")
-            is_leader = 'Member'
+        if nb_players != 1:
+            if not leader_found:
+                is_leader = input("Leader or Member: ")
+                while is_leader not in ["Leader", "Member"]:
+                    is_leader = input("Invalid input. Choose 'Leader' or 'Member': ")
+            else:
+                print(f"The leader has already been selected. The player {name} is automatically assigned as a Member.")
+                is_leader = 'Member'
 
-        if is_leader == 'Leader':
+            if is_leader == 'Leader':
+                leader_found = True
+        if nb_players == 1:
+            is_leader = 'Leader'
             leader_found = True
+            print(f"The team has only one player, so {name} is automatically assigned as the leader.")
 
         # Create and add player to the team
         player = {"name": name, "profession": profession, "role": is_leader}
