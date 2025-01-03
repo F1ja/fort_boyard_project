@@ -21,7 +21,7 @@ def compose_equipe():
                 is_leader=input("Invalid input. Choose 'Leader' or 'Member': ")
         else:
             print(f"The leader has already been selected. The player {name} is automatically assigned as a Member.")
-            is_leader = 'Leader'
+            is_leader = 'Member'
         if is_leader == 'Leader':
             leader_found = True
         player = {"name": name, "profession": profession, "role": is_leader}
