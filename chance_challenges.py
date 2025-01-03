@@ -1,4 +1,5 @@
 import random
+from _ast import While
 from random import randint
 
 # Global variables for messages and shell options
@@ -31,16 +32,16 @@ def shell_game():
     attempts = 2
 
     # Allow the player to make guesses
-    for attempt in range(attempts):
+    while attempts > 0:
         guess = input("Guess the shell: ").upper()
         if guess not in shells:
             print(invalid_mess)
-            continue
-        if guess == key:
+        elif guess == key:
             print("You found the key!")
             return True
-        else:
+        elif guess != key:
             print("Wrong guess!")
+            attempts = attempts - 1
     print("You lost! The key was in:", key)
     return False
 

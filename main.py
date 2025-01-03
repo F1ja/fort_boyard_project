@@ -58,12 +58,16 @@ def game():
                 print("You have successfully unlocked the treasure room!")
             else:
                 print("Unfortunately, you failed to unlock the treasure room.")
+            show_summary = input("Would you like to see the game summary? (yes/no): ")
+            if show_summary.lower() == "yes":
+                with open("Data/output/history.txt", "r") as file:
+                    print("\nGame Summary:")
+                    print(file.read())
             play_again = input("\nDo you want to play another game? (yes/no): ")
             if play_again == "yes":
                 game()
             else:
                 print("Thank you for playing! Goodbye!")
-                break
 
 
 game()

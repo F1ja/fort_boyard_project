@@ -4,3 +4,123 @@ Role: Leader
 Result: Loss
 Keys Won: 0
 ----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Loss
+Keys Won: 0
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
+Challenge: Chance Challenge
+Player: 1 (1)
+Role: Leader
+Result: Win
+Keys Won: 1
+----------------------------------------
